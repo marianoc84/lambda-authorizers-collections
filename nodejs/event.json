@@ -1,0 +1,5 @@
+{
+    "type": "TOKEN",
+    "methodArn": "<YOUR METHOD ARN HERE>",
+    "authorizationToken": "Bearer <PASTE A JWT TOKEN HERE>"
+}

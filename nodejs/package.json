@@ -1,0 +1,21 @@
+{
+  "name": "lambda-authorizer-nodejs10",
+  "version": "1.0.0",
+  "description": "A Lambda Authorizer developed in NodeJS 10",
+  "main": "authorizer.js",
+  "scripts": {
+    "test": "node_modules/.bin/lambda-local -l index.js -h handler -e ./event.json",
+    "serve": "rm -rf dist && mkdir dist && cp package.json index.js ./dist && cd dist && npm install --production && zip -r authorizer.zip index.js node_modules/ && mv authorizer.zip ../",
+    "clean": "rm -rf dist node_modules authorizer.zip"
+  },
+  "author": "Mariano Calandra",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "~0.19.0",
+    "jsonwebtoken": "~8.5.1",
+    "jwk-to-pem": "~2.0.1"
+  },
+  "devDependencies": {
+    "lambda-local": "^1.6.2"
+  }
+}
